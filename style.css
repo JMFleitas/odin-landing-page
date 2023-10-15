@@ -10,12 +10,14 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
     font-family: sans-serif;
+    height: 100vh;
 }
 html{
     font-size: 10px;
 }
+
+/*HEADER*/
 
 .head-container{
     background-color: var(--primary-color);
@@ -30,7 +32,7 @@ html{
     align-items: center;
 }
 
-li {
+.link-left li, .link-right  li {
     display: inline-block;
 }
 
@@ -69,4 +71,90 @@ li {
 .logo img{
     height: 55px;
     align-self: center;
+}
+
+/*body background-image*/
+
+body{
+   background-color:#222;
+}
+
+/*section images*/
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-image: url(./images/imagen6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 50px;
+}
+
+.section-imagen{
+    display: flex;
+    width: 600px;
+    height: 430px;
+  
+}
+
+.section-imagen img{
+    width: 0px;
+    flex: 3;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.section-imagen img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/*EXTRA*/
+.extra {
+    width: 300px;
+    height: 430px;
+  }
+  
+  
+
+  .extra h2{
+    color:#fff ;
+    font-size: 2rem;
+  }
+
+.extra li{
+  color:#fff ;
+  font-size: 1.5rem;
+}
+
+/*MAPS*/
+
+.maps{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    gap: 35px;
+}
+
+.maps h1{
+   font-size: 2.8rem;
+   font-family: var(--font-secondary);
+   text-shadow: 1px 1px black;
+   color: #fff;
+}
+.maps iframe{
+   width: 50%;
+   height: 300px;
+   align-self: center;
+ }
+/*footer*/
+footer{
+    display: flex;
+    height: 150px;
+    background-color: #444;
 }
