@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Mohave:wght@500&display=swap');
 :root{
-    --primary-color: rgb(241, 177, 188);
+    --primary-color: rgb(202, 112, 127);
+    --secondary-color: rgb(46, 46, 46);
     --font-secondary: 'Dancing Script', arial;
+    --font-tree: 'Mohave', sans-serif;
+    --box-shadow:  2px 2px 8px rgb(241, 177, 188);
 }
 
 
@@ -10,22 +13,36 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-    height: 100vh;
+    font-family: var(--font-secondary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 html{
     font-size: 10px;
 }
 
+.box{
+    box-shadow: var(--box-shadow);
+    margin: 5px;
+    background-color: #222;
+}
+
 /*HEADER*/
 
 .head-container{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     min-width: 100%;
     height: 70px;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    opacity: .9;
 }
+
 
 .link-left, .link-right{
     display: flex;
@@ -41,15 +58,18 @@ html{
     text-decoration: none;
     margin-right: 25px;
     color: #000000;
-    font-size: 2rem;
+    text-shadow: 1px 1px  #fff;
+    font-size: 2.5rem;
     padding: 10px;
     font-family: var(--font-secondary);
 }
 
  a:hover{
-    background-color: palevioletred;
+    background-color: var(--primary-color);
+    opacity: 0.8;
     transition: all 0.3s;
     color: #fff;
+    text-shadow: 1px 1px  #000;
     border-radius: 15%;
    
 }
@@ -59,9 +79,11 @@ html{
 }
 
 .title{
-    font-size: 3rem;
+    font-size: 3.5rem;
+    align-self: center;
     color: #0a0a0a;
     font-family: var(--font-secondary);
+    text-shadow: 0.5px 0.8px  #fff;
 }
 
 .logo{
@@ -77,6 +99,7 @@ html{
 
 body{
    background-color:#222;
+   gap: 5px;
 }
 
 /*section images*/
@@ -84,18 +107,21 @@ body{
 .main-container{
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 50px;
     background-image: url(./images/imagen6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     gap: 50px;
+    margin-top: 80px;
+    opacity: 0.8;
+   
 }
 
 .section-imagen{
     display: flex;
     width: 600px;
     height: 430px;
-  
+
 }
 
 .section-imagen img{
@@ -112,33 +138,79 @@ body{
     opacity: 1;
     filter: contrast(120%);
 }
+/*Horarios*/
 
-/*EXTRA*/
+.horario{
+    color: #fff;
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 1px #000000;
+}
+.horario li{
+    margin: 10px;
+    list-style: none;
+}
+
+/*texto*/
+
+.texto{
+    display: flex;
+    background-image: url(./images/fomd2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background-color: #222;
+    opacity: 0.9;
+    height: auto;
+}
+
 .extra {
     width: 300px;
-    height: 430px;
+    height: auto;
+    padding: 24px;
   }
   
-  
 
-  .extra h2{
+  .extra h1{
     color:#fff ;
-    font-size: 2rem;
+    font-size: 3rem;
+    text-shadow: 2px 2px 1px #000000;
+    display: inline-block;
+    text-align: center;
   }
 
-.extra li{
-  color:#fff ;
-  font-size: 1.5rem;
-}
+  .extra p{
+    color:#fff ;
+    font-size: 2.5rem;
+    text-shadow: 2px 1px 1px #000000;
+    text-align: center;
+  }
+
+  .tinta{
+    opacity: 0.7;
+  }
+
+  .tinta:hover{
+    opacity: 1;
+    transition: all 0.8ms;
+    cursor: grab;
+  }
+
+
 
 /*MAPS*/
 
 .maps{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    width: auto;
     padding: 30px;
     gap: 35px;
+    background-image: url(./images/ubi.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .maps h1{
@@ -147,14 +219,17 @@ body{
    text-shadow: 1px 1px black;
    color: #fff;
 }
-.maps iframe{
-   width: 50%;
-   height: 300px;
-   align-self: center;
- }
+
 /*footer*/
 footer{
     display: flex;
-    height: 150px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
     background-color: #444;
+}
+footer h4{
+   color: #fff;
+   font-size: 2rem;
+
 }
